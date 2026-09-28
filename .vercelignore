@@ -1,0 +1,12 @@
+data/
+data/models/
+data/audio/
+frontend/node_modules/
+.pytest_cache/
+tests/
+__pycache__/
+*.log
+*.sqlite
+*.db
+.git/
+.github/

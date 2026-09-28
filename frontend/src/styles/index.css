@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7F2;
+    color: #261C12;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D7C7B0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BAA385;
+}
+
+/* Pulsing audio rings */
+@keyframes voice-ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 25px rgba(200, 90, 50, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0);
+  }
+}
+
+.animate-voice-ripple {
+  animation: voice-ripple 1.8s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Glass card styling */
+.card-sand {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE1D2;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(79, 62, 44, 0.05);
+}
+
+.card-sand-hover {
+  transition: all 0.25s ease-in-out;
+}
+
+.card-sand-hover:hover {
+  transform: translateY(-2px);
+  border-color: #C85A32;
+  box-shadow: 0 10px 25px -5px rgba(200, 90, 50, 0.12);
+}
